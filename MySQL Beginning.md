@@ -17,11 +17,11 @@ MySQL একটি জনপ্রিয় ওপেন সোর্স রি�
 
 ##  **2. Common SQL Operators**
 
-|Type|Operators|Usage Example|
+|Type|Operators|Example (উদাহরণ)|
 |---|---|---|
-|**Arithmetic**|`+`, `-`, `*`, `/`, `%`|`SELECT 10 + 5;` → `15`|
-|**Comparison**|`=`, `!=`, `<`, `>`, `<=`, `>=`|`WHERE age >= 18`|
-|**Logical**|`AND`, `OR`, `NOT`, `BETWEEN`, `IN`, `LIKE`|`WHERE name LIKE 'J%' AND age BETWEEN 20 AND 30`|
+|**Arithmetic**|`+`, `-`, `*`, `/`, `%`|`SELECT 10 + 5;` → 15  <br>`SELECT 10 % 3;` → 1|
+|**Comparison**|`=`, `!=`, `<`, `>`, `<=`, `>=`|`SELECT * FROM products WHERE price >= 1000;`|
+|**Logical**|`AND`, `OR`, `NOT`, `BETWEEN`, `IN`, `LIKE`|`SELECT * FROM products WHERE price BETWEEN 500 AND 1000;`  <br>`SELECT * FROM products WHERE name LIKE 'S%';`  <br>`SELECT * FROM products WHERE category_id IN (1, 3);`|
 
 ---
 
@@ -78,12 +78,12 @@ MySQL একটি জনপ্রিয় ওপেন সোর্স রি�
 
 ##  **7. Joins (জয়েনস)**
 
-|**Join Type**|**Description**|**উদাহরণ (সংক্ষেপে)**|
-|---|---|---|
-|INNER JOIN|দুই টেবলের মিলে যাওয়া রেকর্ডগুলো দেখায়|`SELECT * FROM Products INNER JOIN Categories ON Products.category_id = Categories.id;`|
-|LEFT JOIN|বাম টেবলের সব রেকর্ড + ডান টেবলের মিলে যাওয়া রেকর্ড|`SELECT * FROM Products LEFT JOIN Categories ON Products.category_id = Categories.id;`|
-|RIGHT JOIN|ডান টেবলের সব রেকর্ড + বাম টেবলের মিলে যাওয়া রেকর্ড|`SELECT * FROM Products RIGHT JOIN Categories ON Products.category_id = Categories.id;`|
-|FULL JOIN|দুই টেবলের সব রেকর্ড দেখায় — যেখানে মিল আছে সেগুলো একসাথে, আর যেখানে মিল নেই সেখানে NULL দেখায়|`SELECT * FROM Products FULL JOIN Categories ON Products.category_id = Categories.id;`|
+| **Join Type** | **Description**                                                                                | **উদাহরণ (সংক্ষেপে)**                                                                   |
+| ------------- | ---------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| INNER JOIN    | দুই টেবলের মিলে যাওয়া রেকর্ডগুলো দেখায়                                                        | `SELECT * FROM Products INNER JOIN Categories ON Products.category_id = Categories.id;` |
+| LEFT JOIN     | বাম টেবলের সব রেকর্ড + ডান টেবলের মিলে যাওয়া রেকর্ড                                           | `SELECT * FROM Products LEFT JOIN Categories ON Products.category_id = Categories.id;`  |
+| RIGHT JOIN    | ডান টেবলের সব রেকর্ড + বাম টেবলের মিলে যাওয়া রেকর্ড                                           | `SELECT * FROM Products RIGHT JOIN Categories ON Products.category_id = Categories.id;` |
+| FULL JOIN     | দুই টেবলের সব রেকর্ড দেখায় — যেখানে মিল আছে সেগুলো একসাথে, আর যেখানে মিল নেই সেখানে NULL দেখায় | `SELECT * FROM Products FULL JOIN Categories ON Products.category_id = Categories.id;`  |
 
 ---
 
